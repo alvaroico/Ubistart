@@ -1,0 +1,33 @@
+{
+  "name": "@alvaroico/ubistart",
+  "version": "0.0.1",
+  "description": "Processo Seletivo Ubistart",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc -b",
+    "start": "node ./build/index.js",
+    "criarTabelas":"ts-node-dev src/CreateTabelas.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaroico/Ubistart.git"
+  },
+  "author": "alvaroico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvaroico/Ubistart/issues"
+  },
+  "homepage": "https://github.com/alvaroico/Ubistart#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jwt-decode": "^3.1.2",
+    "mysql": "^2.18.1",
+    "ts-node-dev": "^1.1.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/mysql": "^2.15.19",
+    "@types/pg": "^8.6.1"
+  }
+}
