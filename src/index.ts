@@ -1,12 +1,6 @@
-import express from "express";
-const app = express();
-app.use(express.json());
+import app from "./app";
 
-import homeRota from "./Routes/home";
-import { JWTDecode } from "./Middleware/JWTDecode";
-
-app.use("/",  JWTDecode('alvaroico'), homeRota);
-
-app.listen(8822, () => {
-  console.log(`🙌😎 Servidor HTTP rodando porta: ${8822} 👌`);
+const port = parseInt(process.env.APP_PORT as string) || 8822;
+app.listen(port, () => {
+  console.log(`🙌😎 Servidor HTTP rodando porta: ${port} 👌`);
 });
