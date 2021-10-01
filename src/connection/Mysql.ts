@@ -10,7 +10,7 @@ export const poolMYsql = mysql.createPool({
 
 export { OkPacket };
 
-export const InsertMYsql = (query: string) => {
+export const QueryMYsql = (query: string) => {
   return new Promise((resolve, reject) => {
     poolMYsql.query(query, function (error, results: OkPacket, fields) {
       if (error) {

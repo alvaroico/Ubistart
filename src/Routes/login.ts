@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
+import criarUsuario from '../Controllers/login'
 const router = express.Router();
 
 router.get(
@@ -7,11 +8,6 @@ router.get(
     response.send("Rota Login");
   }
 );
-router.post(
-  "/criar",
-  function (request: Request, response: Response, next: NextFunction) {
-    response.send(request.body);
-  }
-);
+router.post("/criar",criarUsuario.criarUsuario);
 
 export default router;
